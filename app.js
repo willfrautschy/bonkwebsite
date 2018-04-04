@@ -1,9 +1,8 @@
 
 var express = require("express");
 var app = express();
-var port = 3000;
+var port = 80;
 var bodyParser = require("body-parser");
-var host = "104.131.27.245";
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 var ejs = require("ejs");
@@ -215,8 +214,8 @@ app.post("/changeuser", function(req,res){
 		res.render("edit");
 		
 });
-app.listen(port, host, function(){
-	console.log("Server Started");
+app.listen(port, function(){
+	console.log("Server Started at localhost: " + port);
 });
 app.get("/", function(req,res){
 	res.render("home", {});
