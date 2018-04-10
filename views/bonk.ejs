@@ -19,8 +19,10 @@
 			<object type="application/x-shockwave-flash" data="BonkLiveVersion2.swf" width="730" height="500" param name="movie" value="http://bonk.io/BonkLiveVersion2.swf"><param name="FlashVars" value="autoconnectroomid=&amp;autoconnectroompassword="><param name="wmode" value="direct"><param name="allowscriptaccess" value="always"></object>
             <!-- Plan E -->
             <% for(var i = 0; i < things.length; i++){ %>
-            <% if(things[i] === "bonk") { %>
-            <embed src="https://bonk.io/BonkLiveVersion2.swf" data="BonkLiveVersion2.swf" wmode="direct" menu="false" quality="high" allowscriptaccess="samedomain" allownetworking="internal" type="application/x-shockwave-flash" width="730px" height="500px" id="bonkframe"> 
+            <% if(things[i] === "rickroll") { %>
+				<iframe width="730" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" autoplay allowfullscreen id="bonkframe"></iframe>
+            <% } else if (things[i] === "bonk") { %>
+            	<embed src="https://bonk.io/BonkLiveVersion2.swf" data="BonkLiveVersion2.swf" wmode="direct" menu="false" quality="high" allowscriptaccess="samedomain" allownetworking="internal" type="application/x-shockwave-flash" width="730px" height="500px" id="bonkframe"> 
             <% } %>
             <% } %>
             
