@@ -1,9 +1,9 @@
 <% include partials/header %>
 	<div id="bonk">
         <div id="links"><a href="/"><img id="link-back" src="/imgs/logo.png"></a>
-        <% for(var i = 0; i < things.length; i++){ %>
-            <% if(things[i] === "spotify") { %>
-            <img src="/imgs/spotify.jpg" id="spotify">
+        <% for(var i = 0; i < info.applications.length; i++){ %>
+            <% if(info.applications[i] === "spotify") { %>
+            <a href="/spotify"><img src="/imgs/spotify.jpg" id="spotify"></a>
             <% }%>
             <% } %>
         
@@ -18,48 +18,22 @@
             <!-- Plan D  
 			<object type="application/x-shockwave-flash" data="BonkLiveVersion2.swf" width="730" height="500" param name="movie" value="http://bonk.io/BonkLiveVersion2.swf"><param name="FlashVars" value="autoconnectroomid=&amp;autoconnectroompassword="><param name="wmode" value="direct"><param name="allowscriptaccess" value="always"></object>
             <!-- Plan E -->
-            <% for(var i = 0; i < things.length; i++){ %>
-            <% if(things[i] === "rickroll") { %>
-				<iframe width="730" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" autoplay allowfullscreen id="bonkframe"></iframe>
-            <% } else if (things[i] === "bonk") { %>
-            	<embed src="https://bonk.io/BonkLiveVersion2.swf" data="BonkLiveVersion2.swf" wmode="direct" menu="false" quality="high" allowscriptaccess="samedomain" allownetworking="internal" type="application/x-shockwave-flash" width="730px" height="500px" id="bonkframe"> 
+            <% for(var i = 0; i < info.applications.length; i++){ %>
+            <% if(info.applications[i] === "bonk") { %>
+            <embed src="https://bonk.io/BonkLiveVersion2.swf" data="BonkLiveVersion2.swf" wmode="direct" menu="false" quality="high" allowscriptaccess="samedomain" allownetworking="internal" type="application/x-shockwave-flash" width="730px" height="500px" id="bonkframe"> 
             <% } %>
             <% } %>
             
           </div>
         </div>
-         <% for(var i = 0; i < things.length; i++){ %>
-            <% if(things[i] === "unlock") { %>
+         <% for(var i = 0; i < info.applications.length; i++){ %>
+            <% if(info.applications[i] === "unlock") { %>
             <form action="/activate" method="POST">
                 <input type="submit" style="position: fixed;" value="Start All Account">
             </form>
             <% } %>
         <% } %>
-        <% console.log(things) %>
-        <% for(var i = 0; i < things.length; i++){ %>
-            <% if(things[i] === "slither") { %>
-                <div class="slither-box">
-                    <iframe class="slither" src="http://slither.io"></iframe>
-                </div>
-                <hr>
-            <% } %>
-        <% } %>
-        <% for(var i = 0; i < things.length; i++){ %>
-        <% if(things[i] === "agario") { %>
-            <div class="slither-box">
-                <iframe class="slither" src="http://agar.io"></iframe>
-            </div>
-            <hr>
-        <% } %>
-    <% } %>
-    <% for(var i = 0; i < things.length; i++){ %>
-    <% if(things[i] === "diepio") { %>
-        <div class="slither-box">
-            <iframe class="slither" src="http://diep.io"></iframe>
-        </div>
-    <% } %>
-<% } %>
-        
+
         
        
         
